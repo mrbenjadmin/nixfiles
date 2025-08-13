@@ -58,6 +58,8 @@
               extraGroups = [ "wheel" ];
               hashedPassword = "$y$j9T$i9JMWwTrdtSLZ3AQxWaCk1$AeLZzZcBZa4Fm2pOCVEhT56EVChPIIG5tFtn5P6LkL4";
             };
+
+            environment.etc."system-revision".text = if (self ? rev) then self.rev else "dirty";
           }
           home-manager.nixosModules.home-manager {
             home-manager = {

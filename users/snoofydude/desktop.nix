@@ -63,9 +63,10 @@
       enable = true;
       package = pkgs.vscodium;
     };
-    thunderbird = { # fully declarative at some point, unsure if keeping
-      enable = true;
-    };
+    #thunderbird = { # fully declarative at some point, unsure if keeping
+    #  enable = true;
+    #  # thunderbird.profiles was accessed but has no value defined. Try setting the option.
+    #};
     nheko = { # fully declarative at some point
       enable = true;
     };

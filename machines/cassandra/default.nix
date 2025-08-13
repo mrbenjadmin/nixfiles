@@ -21,7 +21,9 @@
   nixpkgs.config = {
     allowUnfree = true;
     #allowBroken = true;
-    #permittedInsecurePackages = [];
+    permittedInsecurePackages = [
+      "olm-3.2.16"
+    ];
   };
   
   time.timeZone = "America/Toronto";

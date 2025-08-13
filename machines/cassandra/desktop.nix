@@ -12,32 +12,32 @@
   gtk.iconCache.enable = false; # fix icons not showing up GNOME
 
   environment.systemPackages = with pkgs; [
-    gnome-osk # on screen keyboard
-    gnome.gnome-tweaks
+    #gnome-osk # on screen keyboard
+    gnome-tweaks
     gnomeExtensions.pop-shell
     gnomeExtensions.tray-icons-reloaded
-    gnome.dconf-editor
+    dconf-editor
   ];
 
-  # on screen keyboard crap
-  services.displayManager.environment.XDG_DATA_DIRS = ":${pkgs.gnome-osk}/share:";
-  services.xserver.desktopManager.gnome.extraGSettingsOverrides = ''
-    [org.gnome.shell]
-    enabled-extensions=[ '${pkgs.gnome-osk.uuid}' ]
-  '';
-  programs.dconf.profiles.gdm.databases = [
-    {
-      settings."org/gnome/shell/extensions/enhancedosk" = {
-        show-statusbar-icon = true;
-        locked = true;
-      };
-    }
-    {
-      settings."org/gnome/shell" = {
-        enabled-extensions = [ "iwanders-gnome-enhanced-osk-extension" ];
-      };
-    }
-  ];
+  # on screen keyboard crap, probably needs fixed
+  #services.displayManager.environment.XDG_DATA_DIRS = ":${pkgs.gnome-osk}/share:";
+  #services.xserver.desktopManager.gnome.extraGSettingsOverrides = ''
+  #  [org.gnome.shell]
+  #  enabled-extensions=[ '${pkgs.gnome-osk.uuid}' ]
+  #'';
+  #programs.dconf.profiles.gdm.databases = [
+  #  {
+  #    settings."org/gnome/shell/extensions/enhancedosk" = {
+  #      show-statusbar-icon = true;
+  #      locked = true;
+  #    };
+  #  }
+  #  {
+  #    settings."org/gnome/shell" = {
+  #      enabled-extensions = [ "iwanders-gnome-enhanced-osk-extension" ];
+  #    };
+  #  }
+  #];
 
   # pen and touch calibration
   services.iptsd = {
@@ -54,22 +54,20 @@
   };
 
   # gnome application exclusion
-  environment.gnome.excludePackages = (with pkgs; [
+  environment.gnome.excludePackages = with pkgs; [
     epiphany
     gnome-tour
     xterm
-  ]) ++ (with pkgs.gnome; [
     gnome-maps
     gnome-weather
     gnome-contacts
     gnome-music
-    # these will soon need the gnome. removed by putting them in the first batch of packages listed here
     gnome-calendar
     totem
     yelp
     gnome-system-monitor
     geary
-  ]);
+  ];
 
   # qt theming
   qt = {

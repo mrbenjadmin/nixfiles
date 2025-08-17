@@ -37,6 +37,7 @@
       cardinal # virtual modular rack
       mixxx
       carla # unsure if we need this still
+      zrythm
       # bitwig-studio-crack # update this and add it to packages
       # wine stuff, unsure if we want this yet
       #wineWowPackages.stableFull

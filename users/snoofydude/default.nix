@@ -13,7 +13,7 @@
     stateVersion = "25.05";
     username = "snoofydude";
     homeDirectory = "/home/snoofydude";
-    shell.enableShellIntegration = true;
+    #shell.enableShellIntegration = true;
     packages = with pkgs; [
       # cli utilities
       ## to be sorted

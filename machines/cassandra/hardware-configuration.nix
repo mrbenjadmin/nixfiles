@@ -73,5 +73,5 @@
 
   nixpkgs.hostPlatform = "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = config.hardware.enableRedistributableFirmware;
-  system.stateVersion = "23.11";
+  system.stateVersion = "25.05";
 }

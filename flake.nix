@@ -71,6 +71,33 @@
           }
         ];
       };
+      brunhilde = nixpkgs-stable.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = flakes;
+        modules = [
+          ./machines/brunhilde
+          #lanzaboote.nixosModules.lanzaboote
+          {
+            users.users.snoofydude = {
+              description = "Jane Strachan";
+              isNormalUser = true;
+              extraGroups = [ "wheel" ];
+              hashedPassword = "$y$j9T$i9JMWwTrdtSLZ3AQxWaCk1$AeLZzZcBZa4Fm2pOCVEhT56EVChPIIG5tFtn5P6LkL4";
+            };
+            
+            environment.etc."system-revision".text = if (self ? rev) then self.rev else "dirty";
+          }
+          # this needs to be given args so it doesn't install desktop apps
+          home-manager.nixosModules.home-manager {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = flakes;
+              users.snoofydude = import ./users/snoofydude;
+            };
+          }
+        ];
+      };
     };
   };
 }

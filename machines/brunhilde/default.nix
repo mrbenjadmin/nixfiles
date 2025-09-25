@@ -3,7 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./zfs.nix
+    #./zfs.nix # kill for now, just until we get drives plugged in
   ];
 
   hardware.graphics.enable = true;

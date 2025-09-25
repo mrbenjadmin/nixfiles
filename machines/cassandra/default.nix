@@ -74,7 +74,7 @@
     };
   };
   # change this to be more generic probably, maybe just tack onto wheel
-  users.users.snoofydude.extraGroups = [ "libvirtd" ];
+  users.users.jane.extraGroups = [ "libvirtd" ];
 
   environment.systemPackages = with pkgs; [ virtiofsd podman-tui podman-compose dive ];
 }

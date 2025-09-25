@@ -52,7 +52,7 @@
           nixos-hardware.nixosModules.microsoft-surface-pro-intel
           lanzaboote.nixosModules.lanzaboote
           {
-            users.users.snoofydude = {
+            users.users.jane = {
               description = "Jane Strachan";
               isNormalUser = true;
               extraGroups = [ "wheel" ];
@@ -66,7 +66,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               extraSpecialArgs = flakes;
-              users.snoofydude = import ./users/snoofydude;
+              users.jane = import ./users/jane;
             };
           }
         ];
@@ -75,10 +75,11 @@
         system = "x86_64-linux";
         specialArgs = flakes;
         modules = [
+          ./machines/common
           ./machines/brunhilde
           #lanzaboote.nixosModules.lanzaboote
           {
-            users.users.snoofydude = {
+            users.users.jane = {
               description = "Jane Strachan";
               isNormalUser = true;
               extraGroups = [ "wheel" ];
@@ -93,7 +94,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               extraSpecialArgs = flakes;
-              users.snoofydude = import ./users/snoofydude;
+              users.jane = import ./users/jane;
             };
           }
         ];

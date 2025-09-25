@@ -11,8 +11,8 @@
 
   home = {
     stateVersion = "25.05";
-    username = "snoofydude";
-    homeDirectory = "/home/snoofydude";
+    username = "jane";
+    homeDirectory = "/home/jane";
     #shell.enableShellIntegration = true;
     packages = with pkgs; [
       # cli utilities

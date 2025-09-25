@@ -20,5 +20,7 @@
   networking = {
     hostName = "brunhilde"; # change to automatic from systemconfig name
     # domain = "snoof.ca"; # see about this
+    useDHCP = true;
+    interfaces.enp78s0.useDHCP = true;
   };
 }

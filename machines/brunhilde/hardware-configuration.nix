@@ -13,11 +13,11 @@
   # perhaps we should be moving storage and persistence to a separate file across the board
   fileSystems = {
     "/" = {
-      device = "/dev/disk/by-uuid/7e817652-7d28-48e4-983f-8c7b4f57c238";
+      device = "/dev/disk/by-uuid/d424a0d7-3639-4ac9-97a4-1efe4bd5a248";
       fsType = "ext4";
     };
     "/boot" = {
-      device = "/dev/disk/by-uuid/9AE1-BDDF";
+      device = "/dev/disk/by-uuid/B73E-71D6";
       fsType = "vfat";
     };
   };

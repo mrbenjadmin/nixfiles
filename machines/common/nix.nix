@@ -18,6 +18,6 @@
   nixpkgs.config.allowBroken = true;
   nixpkgs.config.permittedInsecurePackages = [
     "electron-27.3.11"
-    #"olm-3.2.16"
+    "olm-3.2.16"
   ];
 }

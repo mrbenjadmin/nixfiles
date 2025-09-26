@@ -1,4 +1,4 @@
-{ flakes, ... }:
+{ self, ... }:
 
 {
   imports = [
@@ -23,5 +23,5 @@
 
   hardware.enableAllFirmware = true;
 
-  environment.etc."system-revision".text = if (flakes.self ? rev) then flakes.self.rev else "dirty";
+  environment.etc."system-revision".text = if (self ? rev) then self.rev else "dirty";
 }

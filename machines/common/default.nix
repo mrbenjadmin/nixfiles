@@ -22,4 +22,6 @@
   };
 
   hardware.enableAllFirmware = true;
+
+  environment.etc."system-revision".text = if (self ? rev) then self.rev else "dirty";
 }

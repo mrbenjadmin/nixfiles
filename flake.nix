@@ -58,8 +58,6 @@
               extraGroups = [ "wheel" ];
               hashedPassword = "$y$j9T$i9JMWwTrdtSLZ3AQxWaCk1$AeLZzZcBZa4Fm2pOCVEhT56EVChPIIG5tFtn5P6LkL4";
             };
-
-            environment.etc."system-revision".text = if (self ? rev) then self.rev else "dirty";
           }
           home-manager.nixosModules.home-manager {
             home-manager = {
@@ -82,14 +80,12 @@
             users.users.jane = {
               description = "Jane Strachan";
               isNormalUser = true;
-              extraGroups = [ "wheel" ];
+              extraGroups = [ "wheel" "libvirt" ];
               hashedPassword = "$y$j9T$i9JMWwTrdtSLZ3AQxWaCk1$AeLZzZcBZa4Fm2pOCVEhT56EVChPIIG5tFtn5P6LkL4";
               openssh.authorizedKeys.keys = [ # check if theres a home-manager for this
                 "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOZ3HkB/NJXpNFjLGXLw6CwmL+vYeoVmRH1mykIZgJBV snoofydude@caroline"
               ];
             };
-            
-            environment.etc."system-revision".text = if (self ? rev) then self.rev else "dirty";
           }
           # this needs to be given args so it doesn't install desktop apps
           home-manager.nixosModules.home-manager {

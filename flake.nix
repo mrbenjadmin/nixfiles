@@ -80,7 +80,7 @@
             users.users.jane = {
               description = "Jane Strachan";
               isNormalUser = true;
-              extraGroups = [ "wheel" "libvirt" ];
+              extraGroups = [ "wheel" "libvirtd" ];
               hashedPassword = "$y$j9T$i9JMWwTrdtSLZ3AQxWaCk1$AeLZzZcBZa4Fm2pOCVEhT56EVChPIIG5tFtn5P6LkL4";
               openssh.authorizedKeys.keys = [ # check if theres a home-manager for this
                 "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOZ3HkB/NJXpNFjLGXLw6CwmL+vYeoVmRH1mykIZgJBV snoofydude@caroline"

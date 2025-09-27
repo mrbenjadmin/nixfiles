@@ -66,7 +66,7 @@ in
           };
         };
         hooks.qemu = {
-          #gpu_passthrough = "${gpu_passthrough}";
+          gpu_passthrough = "${gpu_passthrough}";
         };
       };
       containers.enable = true;

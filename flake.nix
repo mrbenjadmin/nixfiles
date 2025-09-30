@@ -50,7 +50,7 @@
         modules = [
           ./machines/cassandra
           nixos-hardware.nixosModules.microsoft-surface-pro-intel
-          lanzaboote.nixosModules.lanzaboote
+          #lanzaboote.nixosModules.lanzaboote
           {
             users.users.jane = {
               description = "Jane Strachan";

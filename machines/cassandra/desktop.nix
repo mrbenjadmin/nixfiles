@@ -88,7 +88,7 @@
   services.printing.enable = true;
 
   # audio!
-  hardware.pulseaudio.enable = false; # change to services.
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;

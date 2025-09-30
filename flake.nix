@@ -77,6 +77,7 @@
           ./machines/brunhilde
           #lanzaboote.nixosModules.lanzaboote
           {
+            nixpkgs.overlays = [(import ./overlays/bitwig.nix)];
             users.users.jane = {
               description = "Jane Strachan";
               isNormalUser = true;

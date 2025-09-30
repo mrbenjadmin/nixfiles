@@ -38,7 +38,7 @@
       mixxx
       carla # unsure if we need this still
       zrythm
-      # bitwig-studio-crack # update this and add it to packages
+      bitwig-studio-crack
       # wine stuff, unsure if we want this yet
       #wineWowPackages.stableFull
       #wineWowPackages.waylandFull

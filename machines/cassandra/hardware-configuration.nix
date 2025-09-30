@@ -3,10 +3,10 @@
 {
   boot = {
     # secure boot
-    lanzaboote = {
-      enable = true;
-      pkiBundle = "/etc/secureboot";
-    };
+    #lanzaboote = {
+    #  enable = true;
+    #  pkiBundle = "/etc/secureboot";
+    #};
     loader = {
       systemd-boot.enable = false;
       efi.canTouchEfiVariables = true;
@@ -17,15 +17,15 @@
 
   fileSystems = {
     "/" = {
-      device = "/dev/disk/by-uuid/10d9ceff-c04a-48c0-9a24-d3685d900f5b";
+      device = "/dev/disk/by-uuid/8cccebc5-30f3-4d15-853b-9a9b9170df56";
       fsType = "ext4";
     };
     "/boot" = {
-      device = "/dev/disk/by-uuid/C3E3-1633";
+      device = "/dev/disk/by-uuid/730E-860F";
       fsType = "vfat";
     };
   };
-  swapDevices = [ { device = "/dev/disk/by-uuid/cbf1537e-9bc6-463e-86f3-e4ce5ca822c2"; } ];
+  swapDevices = [ { device = "/dev/disk/by-uuid/06758048-b183-40c6-acf5-1d774d4d87df"; } ];
 
   environment.systemPackages = with pkgs; [
     libwacom-surface # pen and touch

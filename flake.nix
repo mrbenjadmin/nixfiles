@@ -90,6 +90,7 @@
           }
           # this needs to be given args so it doesn't install desktop apps
           home-manager.nixosModules.home-manager {
+            nixpkgs.overlays = [(import ./overlays/bitwig.nix)];
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;

@@ -52,6 +52,7 @@
           nixos-hardware.nixosModules.microsoft-surface-pro-intel
           #lanzaboote.nixosModules.lanzaboote
           {
+            nixpkgs.overlays = [(import ./overlays/bitwig.nix)];
             users.users.jane = {
               description = "Jane Strachan";
               isNormalUser = true;
@@ -77,7 +78,6 @@
           ./machines/brunhilde
           #lanzaboote.nixosModules.lanzaboote
           {
-            nixpkgs.overlays = [(import ./overlays/bitwig.nix)];
             users.users.jane = {
               description = "Jane Strachan";
               isNormalUser = true;
@@ -90,7 +90,6 @@
           }
           # this needs to be given args so it doesn't install desktop apps
           home-manager.nixosModules.home-manager {
-            nixpkgs.overlays = [(import ./overlays/bitwig.nix)];
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;

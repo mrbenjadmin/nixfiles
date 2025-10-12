@@ -71,8 +71,8 @@
     nheko = { # fully declarative at some point
       enable = true;
     };
-    #vesktop = { # fully declarative at some point
-    #  enable = true;
-    #};
+    vesktop = { # fully declarative at some point
+      enable = true;
+    };
   };
 }

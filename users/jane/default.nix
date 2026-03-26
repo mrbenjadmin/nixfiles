@@ -63,8 +63,10 @@
     # git stuff, make sure this is enough
     git = {
       enable = true;
-      user.email = "ben.strachan1@gmail.com";
-      user.name = "mrbenjadmin";
+      settings = {
+        user.email = "ben.strachan1@gmail.com";
+        user.name = "mrbenjadmin";
+      };
     };
     gh = {
       enable = true;

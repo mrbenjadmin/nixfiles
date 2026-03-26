@@ -6,9 +6,9 @@
   services.xserver = {
     enable = true;
     xkb.layout = "us";
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
   };
+  displayManager.gdm.enable = true;
+  desktopManager.gnome.enable = true;
   gtk.iconCache.enable = false; # fix icons not showing up GNOME
 
   environment.systemPackages = with pkgs; [

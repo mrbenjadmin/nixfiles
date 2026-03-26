@@ -2,11 +2,11 @@
   description = "SnoofNET Infrastructure";
 
   inputs = {
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs-stable";
     };
 
@@ -18,7 +18,7 @@
     deploy-rs.url = "github:serokell/deploy-rs";
 
     # secure boot! wooooooooooo
-    lanzaboote.url = "github:nix-community/lanzaboote/v0.4.2";
+    lanzaboote.url = "github:nix-community/lanzaboote/v1.0.0";
 
     # this is mostly for the surface stuff
     nixos-hardware.url = "github:NixOS/nixos-hardware";

@@ -51,6 +51,7 @@
       # need an irc client and a newsreader
       teams-for-linux # does this even work?
       virt-manager
+      flatpak
     ];
   };
 
